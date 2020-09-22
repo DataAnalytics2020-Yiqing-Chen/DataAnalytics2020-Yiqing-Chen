@@ -83,6 +83,7 @@ summary(DALY)
 fivenum(DALY)
 stem(DALY) #stem and leaf plot
 hist(DALY)
+hist(DALY,seq(0.,100.,1.0),prob=TRUE) 
 lines(density(DALY,na.rm=TRUE,bw=1.))
 rug(DALY)
 
@@ -99,7 +100,7 @@ summary(WATER_H)
 fivenum(WATER_H)
 stem(WATER_H) #stem and leaf plot
 hist(WATER_H)
-hist(WATER_H,seq(30.,95.,1.0),prob=TRUE) #error
+hist(WATER_H,seq(0.,100.,1.0),prob=TRUE) #error
 lines(density(WATER_H,na.rm=TRUE,bw=1.))
 rug(WATER_H)
 
@@ -168,7 +169,7 @@ summary(Resolution)
 fivenum(Resolution)
 stem(Resolution) #stem and leaf plot
 hist(Resolution)
-hist(Resolution,seq(30.,95.,1.0),prob=TRUE) #Error, look at the sequence
+hist(Resolution,seq(0.,400.,1.0),prob=TRUE) 
 lines(density(Resolution,na.rm=TRUE,bw=1.))
 rug(Resolution)
 help(stem)
@@ -192,7 +193,7 @@ summary(COND.D)
 fivenum(COND.D)
 stem(COND.D) #stem and leaf plot
 hist(COND.D)
-hist(COND.D,seq(30.,95.,1.0),prob=TRUE) #Error, look at the sequence
+hist(COND.D,seq(0.,4000.,1.0),prob=TRUE) 
 lines(density(COND.D,na.rm=TRUE,bw=1.))
 rug(COND.D)
 help(stem)
@@ -200,3 +201,4 @@ help(stem)
 plot(ecdf(COND.D),do.points=FALSE,verticals=TRUE) #cumulative density function
 par(pty='s')
 qqnorm(COND.D);qqline(COND.D) #quantile-quantile
+
